@@ -1,3 +1,5 @@
 node_modules
 .env
 .vercel
+*.json
+lefora-ai-firebase-adminsdk-*.json
