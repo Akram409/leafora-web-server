@@ -88,7 +88,7 @@ class UserModel {
       errors.push('Invalid role specified');
     }
     
-    if (!['basic', 'premium', 'pro'].includes(this.plan)) {
+    if (!['basic', 'Pro'].includes(this.plan)) {
       errors.push('Invalid plan specified');
     }
     

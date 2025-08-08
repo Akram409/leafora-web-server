@@ -337,8 +337,7 @@ app.get("/admin/analytics", verifyAdminToken, async (req, res) => {
       },
       usersByPlan: {
         basic: users.filter(u => u.plan === 'basic').length,
-        premium: users.filter(u => u.plan === 'premium').length,
-        pro: users.filter(u => u.plan === 'pro').length,
+        pro: users.filter(u => u.plan === "Pro").length,
       },
       subscriptionStats: {
         active: users.filter(u => u.subscriptionStatus === 'active').length,
