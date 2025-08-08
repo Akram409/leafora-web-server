@@ -1,18 +1,12 @@
 const express = require("express") ;
 const cors = require("cors");
 require("dotenv").config();
-const admin = require("firebase-admin");
 const UserModel = require("./models/userModel");
-const serviceAccount = require("./lefora-ai-firebase-adminsdk-2vpg3-7e25033328.json");
+const { admin, db, auth } = require("./firebaseAdminInit");
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
-
-const db = admin.firestore();
-const auth = admin.auth();
 const app = express();
 const port = process.env.PORT || 5000;
+
 
 // Middleware
 app.use(
